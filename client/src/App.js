@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">Hi, Islam</header>
-    </div>
-  );
+  return <h1>jobify</h1>;
 }
 
 export default App;
