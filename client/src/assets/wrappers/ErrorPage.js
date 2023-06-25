@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.main`
   text-align: center;
@@ -23,6 +23,20 @@ const Wrapper = styled.main`
     text-decoration: underline;
     text-transform: capitalize;
   }
-`
 
-export default Wrapper
+  @media (max-width: 620px) {
+    img {
+      max-width: 400px;
+    }
+  }
+  @media (max-width: 400px) {
+    img {
+      max-width: 300px;
+    }
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+`;
+
+export default Wrapper;
