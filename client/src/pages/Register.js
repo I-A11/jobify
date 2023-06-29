@@ -20,15 +20,18 @@ const Register = () => {
   };
 
   const handleChange = (e) => {
-    console.log(e.target);
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    const { email, password, name, isMember } = values;
+    if (!email || !password || (!isMember && !name)) {
+      displayAlert();
+      return;
+    }
+    console.log(values);
   };
-
-  console.log(values.email);
 
   return (
     <Wrapper className="full-page">
@@ -45,7 +48,6 @@ const Register = () => {
             handleChange={handleChange}
           />
         )}
-
         {/* email input */}
         <FormRow
           type="email"
