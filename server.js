@@ -1,5 +1,7 @@
 import express from "express";
 const app = express();
+import dontenv from "dotenv";
+dontenv.config();
 
 //middleware
 import notFoundMiddleware from "./middleware/not-found.js";
